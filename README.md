@@ -1,39 +1,106 @@
 
-# Project XYZ
+# The Sanrio Index 
 
-**Project XYZ** is a comprehensive data analysis tool designed to streamline data exploration, analysis, and visualisation. The tool supports multiple data formats and provides an intuitive interface for both novice and expert data scientists.
+**The Sanrio Index** is a comprehensive data analysis tool designed to streamline data exploration, analysis, and visualisation. The tool supports multiple data formats and provides an intuitive interface for both novice and expert data scientists.
 
-# ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# ![Sanrio Characters](https://shoplineimg.com/5cc813ba527c4b0001a31e32/674e6a94d11b16000ae62529/1080x.webp?source_format=jpg)
+
 
 
 ## Dataset Content
-* Describe your dataset. Choose a dataset of reasonable size to avoid exceeding the repository's maximum size of 100Gb.
+The dataset **SanrioRank** comprises information about the rankings of various Sanrio characters over the years. This dataset consists of 410 rows and 10 columns. Each row in the dataset represents a character's ranking in a specific year, and the columns provide additional context about the character's performance and background.
+
+The dataset includes the following columns:
+
+1. **Year:** The year when the ranking was recorded.
+
+2. **Rank:** The character's rank for that particular year.
+
+3. **Character Name:** The name of the character.
+
+4. **Unique Characters:** A unique identifier for characters, accounting for name variations.
+
+5. **Debut:** The year the character made its first appearance.
+
+6. **First Year Ranked:** The first year the character appeared in the top 10 rankings.
+
+7. **Latest Year Ranked:** The most recent year the character was ranked in the top 10.
+
+8. **Total Times Ranked:** The total number of times the character has been in the top 10 rankings.
+
+9. **Highest Rank:** The best rank the character has achieved.
+
+10. **Lowest Rank:** The lowest rank the character has achieved.
+
+This dataset is valuable for analyzing trends, popularity shifts, and historical performance of Sanrio characters over nearly four decades. It can be used for data visualization, trend analysis, and generating insights into the factors that influence a character's popularity.
 
 
 ## Business Requirements
-* Describe your business requirements
+Understanding character popularity is essential for Sanrio's marketing, merchandising and brand strategy. The analysis aims to: 
+1. Identify long-term trends in character popularity 
+2. Discover Patterns that correlate with external factors (e.g.media, apppearances and collaborations)
+3. Provide insights into how character rankings flactuate over time 
 
 
-## Hypothesis and how to validate?
-* List here your project hypothesis(es) and how you envision validating it (them) 
+## Hypothesis and Validation 
 
-## Project Plan
-* Outline the high-level steps taken for the analysis.
-* How was the data managed throughout the collection, processing, analysis and interpretation steps?
-* Why did you choose the research methodologies you used?
+**Hypotheses:**
+* Hello Kitty remains the most popular character overall but may flactuate in ranking
+* Media Exposure (e.g. anime, merchandise and collaboration) influences ranking positions 
+* New characters introduced in recent years see a temporary spike in popularity but struggle to maintain top positions
 
-## The rationale to map the business requirements to the Data Visualisations
-* List your business requirements and a rationale to map them to the Data Visualisations
+**Validation:**
+* Time-Series analysis of ranking trends 
+* Correlation analysis between media appearances and ranking flactuations 
+* Comparisions of older vs. newer characters rank longevity
 
-## Analysis techniques used
-* List the data analysis methods used and explain limitations or alternative approaches.
-* How did you structure the data analysis techniques. Justify your response.
-* Did the data limit you, and did you use an alternative approach to meet these challenges?
-* How did you use generative AI tools to help with ideation, design thinking and code optimisation?
+## Project Plan & Roadmap
+1. **Data Collection & Cleaning** 
+    - Handling missing values and inconsisitencies 
+    - Standardising character names and ranking positions 
+2. **Exploratory Data Analysis**
+    - Visualising trends in character rankings 
+    - Identifying ranking stability and volatility 
+3. **Hypothesis Testing** 
+    - Correlation Analysis between ranking shifts and external factors
+    - Analysing the longevity of character popularity 
+4. **Data Visualisation & Insights** 
+    - Creating interactive dashboard 
+    - Communicating findings for both technical and non-technical audiences 
+5. **Machine Learning(Optional)**
+    - Trends predictions based on historical data
+    - Clustering analysis to group characters based on voting patterns 
+6. **Dashboard Development in Streamlit**
+    - Interactive UI for data exploration
+    - Filters to selectt specific years of characters 
+    - AI-generated insights summarising key findings 
+7. **Final Documentation & Deployment**
+    - Hosting on Streamlit 
+
+
+## Business Requirements & Data Visualisations Mapping 
+| **Business Requirement**              | **Data Visualization**                       |
+|---------------------------------------|------------------------------------------------|
+| Identify long-term ranking trends      | Line charts & heatmaps                        |
+| Determine ranking stability            | Box plots & standard deviation analysis        |
+| Analyse new vs. established characters | Bar charts & trend comparisons                |
+| Impact of media exposure                | Overlay media release dates on ranking graphs |
+
+
+## Analysis Techniques Used
+* **Time-Series Analysis:** Tracking ranking over time 
+* **Statistical Correlation:** Exploring relationships between ranking and external influences 
+* **Data Clustering:** Grouping charcters based on ranking similarity 
+
+## Limiatations & Alternative Approaches 
+* The dataset lacks direct indicators of external factors (anime releases). ***Alternative approach:*** Cross referencing external datasets. 
+* Data may not account for regional populairty differences
+* Generative AI tools were used to assist with exploratory visualisations and data 
 
 ## Ethical considerations
-* Were there any data privacy, bias or fairness issues with the data?
-* How did you overcome any legal or societal issues?
+* **Bias Awareness:** The ranking reflect Sanrio's official rsults, but survey biases may exist 
+* **Data Privacy:** No personal data is involved, making it ethical for public analysis 
+* **Fair Representation:** Analysis ensures no undue preferences is given to specific characters 
 
 ## Dashboard Design
 * List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other item that your dashboard library supports.
@@ -41,51 +108,46 @@
 * How were data insights communicated to technical and non-technical audiences?
 * Explain how the dashboard was designed to communicate complex data insights to different audiences. 
 
-## Unfixed Bugs
-* Please mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable to consider, paucity of time and difficulty understanding implementation are not valid reasons to leave bugs unfixed.
-* Did you recognise gaps in your knowledge, and how did you address them?
-* If applicable, include evidence of feedback received (from peers or instructors) and how it improved your approach or understanding.
+## Challenges & Solutions 
+* **Handling Missing Data:** Used interpolation techniques 
+* **Ensuring Accuracy in Trend Analysis:** Cross-checked with multiple sources 
+* **Optimizing Dashboard Performance:** Reduced data load times with caching 
 
-## Development Roadmap
-* What challenges did you face, and what strategies were used to overcome these challenges?
-* What new skills or tools do you plan to learn next based on your project experience? 
+## Future Improvements 
+1. Integrate sentiment analysis using social media data 
+2. Expand dataset with external sources 
+3. Enhance AI-generated insights 
+4. Project deployment on cloud platform 
 
-## Deployment
-### Heroku
+## Technologies Used 
+| **Technology**           | **Tools/Frameworks**               |
+|---------------------------|------------------------------------|
+| Programming Language       | Python                             |
+| Data Analysis               | Pandas, NumPy                      |
+| Data Visualization          | Matplotlib, Seaborn, Plotly        |
+| Machine Learning (if applicable) | Scikit-learn                    |
+| Web Application             | Streamlit                          |
+| Notebook Environment        | Jupyter Notebook                   |
 
-* The App live link is: https://YOUR_APP_NAME.herokuapp.com/ 
-* Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
-* The project was deployed to Heroku using the following steps.
-
-1. Log in to Heroku and create an App
-2. From the Deploy tab, select GitHub as the deployment method.
-3. Select your repository name and click Search. Once it is found, click Connect.
-4. Select the branch you want to deploy, then click Deploy Branch.
-5. The deployment process should happen smoothly if all deployment files are fully functional. Click now the button Open App on the top of the page to access your App.
-6. If the slug size is too large then add large files not required for the app to the .slugignore file.
-
-
-## Main Data Analysis Libraries
-* Here you should list the libraries you used in the project and provide an example(s) of how you used these libraries.
+## Main Data Analysis Libraries 
+| **Library**          | **Purpose**                            |
+|----------------------|----------------------------------------|
+| pandas                | Data cleaning & manipulation            |
+| matplotlib/seaborn    | Visualization                           |
+| scikit-learn          | Clustering & trend analysis             |
+| plotly/dash           | Interactive dashboards                  |
 
 
 ## Credits 
+**Dataset**
+ - This dataset is from Kaggle [SanrioRank](https://www.kaggle.com/datasets/alyahh/sanrio-character-rankings-top-10-19862024) 
 
-* In this section, you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
-* You can break the credits section up into Content and Media, depending on what you have included in your project. 
-
-### Content 
-
-- The text for the Home page was taken from Wikipedia Article A
+**Content:**
 - Instructions on how to implement form validation on the Sign-Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
-- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
 
-### Media
+**Media**
+- The image used were taken from (https://www.sanriogiftgate.com.hk/en/categories/sanrio-mix-characters)
+- Dashboard planning 
 
-- The photos used on the home and sign-up page are from This Open-Source site
-- The images used for the gallery page were taken from this other open-source site
-
-
-
-## Acknowledgements (optional)
-* Thank the people who provided support through this project
+## Conclusion
+This project successfully demonstrates data analytics, visualisations and AI-driven insights to analyse Sanrio Characters Ranking. The interactive dashboards enables both technical and non-technical audiences to explore data-driven findings efficiently.  
