@@ -1,16 +1,15 @@
 
 # The Sanrio Index 
 
-**The Sanrio Index** is a comprehensive data analysis tool designed to streamline data exploration, analysis, and visualisation. The tool supports multiple data formats and provides an intuitive interface for both novice and expert data scientists.
+**The Sanrio Index** is a comprehensive data analysis tool designed to explore, analyse and visualise the popularity trends of Sanrio characters over time. By leveraging rich datasets and interactive dashboards, this project aims to uncover key insights that inform business strategies, marketing decisions and brand evolution for Sanrio 
 
 # ![Sanrio Characters](https://shoplineimg.com/5cc813ba527c4b0001a31e32/674e6a94d11b16000ae62529/1080x.webp?source_format=jpg)
 
 
-
 ## Dataset Content
-The dataset **SanrioRank** comprises information about the rankings of various Sanrio characters over the years. This dataset consists of 410 rows and 10 columns. Each row in the dataset represents a character's ranking in a specific year, and the columns provide additional context about the character's performance and background.
+The dataset **SanrioRank** comprises information about the rankings of various Sanrio characters over the years. It includes 410 rows and 10 columns, each representing a character's ranking and performance details.
 
-The dataset includes the following columns:
+**Columns:**
 
 1. **Year:** The year when the ranking was recorded.
 
@@ -37,8 +36,8 @@ This dataset is valuable for analyzing trends, popularity shifts, and historical
 
 ## Business Requirements
 Understanding character popularity is essential for Sanrio's marketing, merchandising and brand strategy. The analysis aims to: 
-1. Identify long-term trends in character popularity 
-2. Discover Patterns that correlate with external factors (e.g.media, apppearances and collaborations)
+1. Identify long-term character popularity trends
+2. Analysing patterns linked to media exposure, merch releases and collaborations
 3. Provide insights into how character rankings flactuate over time 
 
 
@@ -52,7 +51,7 @@ Understanding character popularity is essential for Sanrio's marketing, merchand
 **Validation:**
 * Time-Series analysis of ranking trends 
 * Correlation analysis between media appearances and ranking flactuations 
-* Comparisions of older vs. newer characters rank longevity
+* Comparative analysis of older vs newer character longevity
 
 ## Project Plan & Roadmap
 1. **Data Collection & Cleaning** 
@@ -94,7 +93,7 @@ Understanding character popularity is essential for Sanrio's marketing, merchand
 
 ## Limitations & Alternative Approaches 
 * The dataset lacks direct indicators of external factors (anime releases). ***Alternative approach:*** Cross referencing external datasets. 
-* Data may not account for regional populairty differences
+* Data may not account for regional populairity differences
 * Generative AI tools were used to assist with exploratory visualisations and data 
 
 ## Ethical considerations
@@ -104,7 +103,7 @@ Understanding character popularity is essential for Sanrio's marketing, merchand
 
 ## Dashboard Design
 **Overview**
-- This dashboard is designed to provide insights into Sanrio Character Rankings for both technical and non-technical audiences. It combines interactive filters, visual storytelling and key performance indicators to maximise user engagement and understanding. 
+- The dashboard was designed to deliver insights effectively for both technical and non-technical audiences. It integrates interactive elements, visual storytelling, and key performance indicators (KPIs) to maximize engagement.
 
 ---
 **Page 1: Overview of Ranking**
@@ -216,7 +215,7 @@ Understanding character popularity is essential for Sanrio's marketing, merchand
  - This dataset is from Kaggle [SanrioRank](https://www.kaggle.com/datasets/alyahh/sanrio-character-rankings-top-10-19862024) 
 
 **Content:**
-- Instructions on how to implement form validation on the Sign-Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
+- Form validation instruction adapted from [Specific YouTube Tutorial](https://www.youtube.com/)
 
 **Media**
 - The image used were taken from (https://www.sanriogiftgate.com.hk/en/categories/sanrio-mix-characters)
