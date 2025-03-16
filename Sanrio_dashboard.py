@@ -3,6 +3,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import io # For download feature 
+import numpy as np
 
 # Load the cleaned dataset
 @st.cache_data
@@ -64,4 +65,60 @@ buffer = io.BytesIO()
 filtered_data.to_csv(buffer, index=False)
 st.download_button("Download Filtered Data", data=buffer.getvalue(), file_name='filtered_sanrio_data.csv', mime='text/csv')
 
-# Character Peformance
+# Character Peformance (Page 2)
+if page == "Overview of Rankings":
+    st.title("Character Performance")
+elif page == "Character Performance":  
+    st.title("Character Trends Over Time")
+
+
+# Dropdown for Characters Selection
+selected_character = st.selectbox("Select Character", sorted(df['Character Name'].unique()))
+
+# Line Chart 
+character_data = df[df['Character Name'] == selected_character]
+line_chart = px.line(character_data, 
+                     x='Year',
+                     y='Rank',
+                     title=f'{selected_character} Performance Over Time')
+st.plotly_chart(line_chart)
+
+# Heatmap
+heatmap_data = df.pivot_table(index='Character Name', columns='Year', values='Rank')
+heatmap_data.columns = np.array(heatmap_data.columns) #help with warning in terminal
+st.write("### Heatmap of Rankings")
+st.dataframe(heatmap_data)
+
+#KPI for Character Stats
+st.write(f"### {selected_character}'s Performance Overview")
+highest_rank = character_data['Highest Rank'].min()
+lowest_rank = character_data['Lowest Rank'].max()
+total_times_ranked = character_data['Total Times Ranked'].sum()
+
+col1, col2, col3 =st.columns(3)
+col1.metric("Highest Rank Achieved", highest_rank)
+col2.metric("Lowest Rank Achived", lowest_rank)
+col3.metric("Total Times Ranked", total_times_ranked)
+
+# Debut and Longevity Analysis (Page 3)
+if page == "Overview of Rankings":
+    st.title("Debut and Popularity Analysis")
+elif page == "Debut and Popularity Analysis":
+    st.title("Debut and Popularity Analysis")
+
+# Histogram of Debut Years
+debut_hist = px.histogram(df,
+                          x='Debut',
+                          nbins=20,
+                          title="Distribution of Characters by Debut Year")
+st.plotly_chart(debut_hist)
+
+# Bar Chart for Total Years Ranked 
+ranked_years_chart = px.bar(df.groupby('Character Name')['Total Times Ranked'].sum().reset_index(),x='Character Name', y='Total Times Ranked', title='Total Years Ranked by Character')
+st.plotly_chart(ranked_years_chart)
+
+# Scatter Plot for Debut Years vs. Total Times Ranked 
+scatter_plot = px.scatter(df,x='Debut', y='Total Times Ranked', color='Highest Rank', title='Debut Year vs. Total Times Ranked')
+st.plotly_chart(scatter_plot)
+
+# Custom Insights (Page 4)
