@@ -31,7 +31,7 @@ The dataset **SanrioRank** comprises information about the rankings of various S
 
 10. **Lowest Rank:** The lowest rank the character has achieved.
 
-This dataset is valuable for analyzing trends, popularity shifts, and historical performance of Sanrio characters over nearly four decades. It can be used for data visualization, trend analysis, and generating insights into the factors that influence a character's popularity.
+This dataset can help to characterise the trends, shifts in popularity and historical peformance of Sanrio charcters over the span of almost four decades. The analysis may involve data visualisation and trend analysis, and it will generate insight into the various factors that influence a characters popularity. 
 
 
 ## Business Requirements
@@ -45,7 +45,7 @@ Understanding character popularity is essential for Sanrio's marketing, merchand
 
 **Hypotheses:**
 * Hello Kitty remains the most popular character overall but may flactuate in ranking
-* Media Exposure (e.g. anime, merchandise and collaboration) influences ranking positions 
+* Media Exposure like anime, merchandise and collaboration influences ranking positions 
 * New characters introduced in recent years see a temporary spike in popularity but struggle to maintain top positions
 
 **Validation:**
@@ -94,7 +94,7 @@ Understanding character popularity is essential for Sanrio's marketing, merchand
 ## Limitations & Alternative Approaches 
 * The dataset lacks direct indicators of external factors (anime releases). ***Alternative approach:*** Cross referencing external datasets. 
 * Data may not account for regional populairity differences
-* Generative AI tools were used to assist with exploratory visualisations and data 
+* Generative AI tools prooved useful in assisting with exploratory visualisations and data. 
 
 ## Ethical considerations
 * **Bias Awareness:** The ranking reflect Sanrio's official rsults, but survey biases may exist 
