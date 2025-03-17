@@ -145,6 +145,29 @@ The dashboard was designed to balanced functionality and visual appeal, ensuring
 
 # [Dashboard Plan](https://github.com/tamikamqhum/Sanrio_Ranking/blob/main/Dashboard%20Planning.jpg)
 
+---
+## Deployment 
+The Sanrio Starlight Dashboard has been deployed using **Streamlit Community.** You can access the live app here: [Sanrio Starlight Dashboard](https://sanriostarlightdashboard.streamlit.app/)
+
+**Deployment Steps:**
+
+1. Run Streamlit File:  
+```bash
+streamlit run Sanrio_dashboard.py
+```
+
+2. Host URL Generated: Streamlit provided a local hosting URL for initial testing.  
+
+3. Clicked Deploy Button: Used the Streamlit Community Cloud interface to initiate deployment.  
+
+4. Named the App: Chose the name **Sanrio Starlight Dashboard** during the setup process.  
+
+5. Signed in with GitHub: Connected the app to the relevant GitHub repository for version control and updates.  
+
+6. Deployed to Streamlit Cloud: Successfully deployed the app, which is now live and accessible.  
+
+
+
 
 ## Challenges & Solutions 
 * **Handling Missing Data:** Used interpolation techniques 
