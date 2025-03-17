@@ -15,7 +15,7 @@ def load_data():
 df = load_data()
 
 # Sidebar Navigation
-st.sidebar.title("Navigation")
+st.sidebar.title("🌟 Navigation")
 page = st.sidebar.radio(
     "Go to",
     [
@@ -26,16 +26,18 @@ page = st.sidebar.radio(
     ]
 )
 
-# Soft pastel color scheme
-custom_colors = ["#FEC8D8", "#FFE5B4", "#B4D8FE", "#E0BBE4"]  # Pink, Yellow, Blue, Purple
+# Neon color scheme for black background
+neon_colors = ["#FF1493", "#00FFFF", "#32CD32", "#FFFF00"]  # Pink, Cyan, Neon Green, Neon Yellow
 
 # Overview of Rankings
 if page == "Overview of Rankings":
-    st.title("Sanrio Character Ranking Overview")
+    st.title("📊 Sanrio Character Ranking Overview")
 
-    # Dropdown Filters
-    year_filter = st.selectbox("Select Year", sorted(df['Year'].dt.year.unique()))
-    character_filter = st.selectbox("Filter by Character", sorted(df['Character Name'].unique()))
+    # 🎯 Year Filter
+    year_filter = st.selectbox("🎯 Select Year", sorted(df['Year'].dt.year.unique()))
+
+    # 🎯 Character Filter
+    character_filter = st.selectbox("🎯 Filter by Character", sorted(df['Character Name'].unique()))
 
     # Filter the Data for Selected Year
     filtered_data = df[df['Year'].dt.year == year_filter]
@@ -44,24 +46,24 @@ if page == "Overview of Rankings":
     if filtered_data.empty:
         st.warning("No data available for the selected year.")
     else:
-        # Create Bar Chart
+        # 📊 Bar Chart
         bar_chart = px.bar(
             filtered_data,
             x='Character Name',
             y='Rank',
-            title=f'Ranking for {year_filter}',
+            title=f'📊 Ranking for {year_filter}',
             labels={'Rank': 'Ranking', 'Character Name': 'Character'},
-            color_discrete_sequence=custom_colors
+            color_discrete_sequence=neon_colors
         )
         st.plotly_chart(bar_chart)
 
-        # Top 10 Table
+        # 🔝 Top 10 Characters Table
         top_10 = filtered_data.sort_values('Rank').head(10)
-        st.write("### Top 10 Characters Summary")
+        st.write("### 🔝 Top 10 Characters Summary")
         st.dataframe(top_10[['Character Name', 'Rank', 'Highest Rank', 'Lowest Rank', 'Total Times Ranked']])
 
-        # KPI Metrics
-        st.write("### Summary Statistics")
+        # 📈 KPI Metrics
+        st.write("### 📈 Summary Statistics")
         total_unique_characters = df['Character Name'].nunique()
         top_rank_character = df[df['Rank'] == 1]['Character Name'].value_counts().idxmax()
 
@@ -69,11 +71,11 @@ if page == "Overview of Rankings":
         col1.metric(label="Total Unique Characters", value=total_unique_characters)
         col2.metric(label="Most Frequent No.1 Character", value=top_rank_character)
 
-        # Download Filtered Data
+        # 📥 Download Filtered Data
         buffer = io.BytesIO()
         filtered_data.to_csv(buffer, index=False)
         st.download_button(
-            "Download Filtered Data",
+            "📥 Download Filtered Data",
             data=buffer.getvalue(),
             file_name='filtered_sanrio_data.csv',
             mime='text/csv'
@@ -81,34 +83,34 @@ if page == "Overview of Rankings":
 
 # Character Performance
 elif page == "Character Performance":
-    st.title("Character Trends Over Time")
+    st.title("📈 Character Trends Over Time")
 
-    # Dropdown for Character Selection
-    selected_character = st.selectbox("Select Character", sorted(df['Character Name'].unique()))
+    # 🎯 Character Selection Filter
+    selected_character = st.selectbox("🎯 Select Character", sorted(df['Character Name'].unique()))
 
-    # Line Chart
+    # 📈 Line Chart
     character_data = df[df['Character Name'] == selected_character]
     line_chart = px.line(
         character_data,
         x='Year',
         y='Rank',
-        title=f'{selected_character} Performance Over Time',
-        color_discrete_sequence=custom_colors
+        title=f'📈 {selected_character} Performance Over Time',
+        color_discrete_sequence=neon_colors
     )
     st.plotly_chart(line_chart)
 
-    # Heatmap
+    # 🔥 Heatmap
     heatmap_data = df.pivot_table(index='Character Name', columns='Year', values='Rank')
     heatmap_fig = px.imshow(
         heatmap_data,
         labels=dict(x="Year", y="Character Name", color="Rank"),
-        title="Rank Heatmap by Year and Character",
-        color_continuous_scale=['#FEC8D8', '#FFE5B4', '#B4D8FE', '#E0BBE4']  # Pastel gradient
+        title="🔥 Rank Heatmap by Year and Character",
+        color_continuous_scale=['#FF1493', '#00FFFF', '#32CD32', '#FFFF00']  # Neon gradient
     )
     st.plotly_chart(heatmap_fig)
 
-    # KPI Metrics
-    st.write(f"### {selected_character}'s Performance Overview")
+    # 📊 KPI Metrics
+    st.write(f"### 📊 {selected_character}'s Performance Overview")
     highest_rank = character_data['Highest Rank'].min()
     lowest_rank = character_data['Lowest Rank'].max()
     total_times_ranked = character_data['Total Times Ranked'].sum()
@@ -120,52 +122,54 @@ elif page == "Character Performance":
 
 # Debut and Longevity Analysis
 elif page == "Debut and Longevity Analysis":
-    st.title("Debut and Longevity Analysis")
+    st.title("🔍 Debut and Longevity Analysis")
 
-    # Histogram of Debut Years
+    # 📊 Histogram
     debut_hist = px.histogram(
         df,
         x='Debut',
         nbins=20,
-        title="Distribution of Characters by Debut Year",
-        color_discrete_sequence=custom_colors
+        title="📊 Distribution of Characters by Debut Year",
+        color_discrete_sequence=neon_colors
     )
     st.plotly_chart(debut_hist)
 
-    # Bar Chart for Total Years Ranked
+    # 📊 Bar Chart for Total Years Ranked
     total_years_ranked = df.groupby('Character Name')['Total Times Ranked'].sum().reset_index()
     ranked_years_chart = px.bar(
         total_years_ranked,
         x='Character Name',
         y='Total Times Ranked',
-        title='Total Years Ranked by Character',
-        color_discrete_sequence=custom_colors
+        title='📊 Total Years Ranked by Character',
+        color_discrete_sequence=neon_colors
     )
     st.plotly_chart(ranked_years_chart)
 
-    # Scatter Plot for Debut Year vs. Total Times Ranked
+    # 🔍 Scatter Plot
     scatter_plot = px.scatter(
         df,
         x='Debut',
         y='Total Times Ranked',
         color='Highest Rank',
-        title='Debut Year vs. Total Times Ranked',
-        color_discrete_sequence=custom_colors
+        title='🔍 Debut Year vs. Total Times Ranked',
+        color_discrete_sequence=neon_colors
     )
     st.plotly_chart(scatter_plot)
 
 # Custom Insights
 elif page == "Custom Insights":
-    st.title("Deep Dive: Insights and Comparisons")
+    st.title("🏅 Deep Dive: Insights and Comparisons")
 
-    # Filters for Custom Insights
+    # 🎯 Year Filter
     selected_years = st.multiselect(
-        "Select Years",
+        "🎯 Select Years",
         sorted(df['Year'].dt.year.unique()),
         default=df['Year'].dt.year.unique()[:5]
     )
+
+    # 🎯 Character Filter
     selected_characters = st.multiselect(
-        "Select Characters",
+        "🎯 Select Characters",
         sorted(df['Character Name'].unique()),
         default=df['Character Name'].head(5)
     )
@@ -180,28 +184,28 @@ elif page == "Custom Insights":
     if filtered_insights.empty:
         st.warning("No data available for the selected filters.")
     else:
-        # Generate Insight Chart
+        # 📈 Line Chart
         insight_chart = px.line(
             filtered_insights,
             x='Year',
             y='Rank',
             color='Character Name',
-            title='Comparison of Popularity Trends',
-            color_discrete_sequence=custom_colors
+            title='📈 Comparison of Popularity Trends',
+            color_discrete_sequence=neon_colors
         )
         st.plotly_chart(insight_chart)
 
-    # KPI Indicators
-    st.markdown("### Key Takeaways")
+    # 🏅 Key Takeaways
+    st.markdown("### 🏅 Key Takeaways")
     consistent_top_rankers = df[df['Rank'] <= 3]['Character Name'].value_counts().head(3)
-    st.write("Characters with consistently high rankings:")
+    st.write("Top 3 Characters with Consistently High Rankings:")
     st.write(consistent_top_rankers)
 
-    # Download Insights Data
+    # 📥 Download Insights Data
     buffer = io.BytesIO()
     filtered_insights.to_csv(buffer, index=False)
     st.download_button(
-        "Download Insights Data",
+        "📥 Download Insights Data",
         data=buffer.getvalue(),
         file_name='custom_insights.csv',
         mime='text/csv'
