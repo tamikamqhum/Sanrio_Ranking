@@ -122,3 +122,51 @@ scatter_plot = px.scatter(df,x='Debut', y='Total Times Ranked', color='Highest R
 st.plotly_chart(scatter_plot)
 
 # Custom Insights (Page 4)
+if page == "Overview of Rankings":
+    st.title("Custom Insights")
+elif page == "Custom Insights":
+    st.title("Deep Dive: Insights and Comparisons")
+
+# Filtered Data for Custom Insights
+selected_years = st.multiselect(
+    "Select Years", sorted(df['Year'].dt.year.unique()), default=df['Year'].dt.year.unique()[:5]
+)
+selected_characters = st.multiselect(
+    "Select Characters", sorted(df['Character Name'].unique()), default=df['Character Name'].head(5)
+)
+
+# Side by Side Plots
+# Filter data for custom insights
+filtered_insights = df[
+    (df['Year'].dt.year.isin(selected_years)) &
+    (df['Character Name'].isin(selected_characters))
+]
+
+# Check for empty filtered data
+if filtered_insights.empty:
+    st.warning("No data available for the selected filters.")
+else:
+    # Generate insight chart
+    insight_chart = px.line(
+        filtered_insights, 
+        x='Year', 
+        y='Rank', 
+        color='Character Name', 
+        title='Comparison of Popularity Trends'
+    )
+    st.plotly_chart(insight_chart)
+
+# KPI Indicators 
+st.markdown("### Key Takeaways")
+consistent_top_rankers = df[df['Rank']<=3]['Character Name'].value_counts().head(3)
+st.write("Characters with Consistently High Rankings:")
+st.write(consistent_top_rankers)
+
+# Download Insights Data
+buffer = io.BytesIO()
+filtered_insights.to_csv(buffer, index=False)
+st.download_button("Download Insights Data", data=buffer.getvalue(), file_name='custom_insights.csv', mime='text/csv')
+
+# Footer 
+st.sidebar.markdown("---")
+st.sidebar.write("Sanrio Character Dashboard - Designed with love using Streamlit")
