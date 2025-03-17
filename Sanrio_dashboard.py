@@ -52,12 +52,13 @@ if page == "Introduction":
     💡 *Fun Fact:* Hello Kitty has consistently remained a fan-favorite since her debut in 1974!
     """)
 
-# Image
-st.image(
-    "https://admin.sportshackster.com//BlogFiles/Untitled_design_63858880819066.jpg",
-    caption="Sanrio Characters",
-    use_container_width=True # used container width parameter as stated on local host 
-)
+    # Only display the image on the Introduction page
+    st.image(
+        "https://admin.sportshackster.com//BlogFiles/Untitled_design_63858880819066.jpg", 
+        caption="Sanrio Characters", 
+        use_container_width=True
+    )
+
 
 # Overview of Rankings
 if page == "Overview of Rankings":
