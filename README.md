@@ -187,7 +187,16 @@ The dashboard was designed to balanced functionality and visual appeal, ensuring
  - This dataset is from Kaggle [SanrioRank](https://www.kaggle.com/datasets/alyahh/sanrio-character-rankings-top-10-19862024) 
 
 **Content:**
-- Form validation instruction adapted from [Specific YouTube Tutorial](https://www.youtube.com/)
+- [Streamlit Cheatsheet for Beginners](https://codemaker2016.medium.com/streamlit-cheatsheet-for-beginners-eb93da97ae)
+- [Streamlit Quick Reference](https://cheat-sheet.streamlit.app/)
+- [Youtube: Line Chart Guide](https://youtu.be/jWoqQ8lb778?si=JRw6YfxbmyBhlJH-)
+- [Youtube: Bar Chart Guide](https://youtu.be/oKUvJQFiqiQ?si=PK1KCvGrzVq44FZY)
+- [Streamlit How to Walkthrough](https://youtu.be/7yAw1nPareM?si=NdpzCCweKF1HaFbT)
+- [LMS](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+DECF+3/courseware/7f2eeef8fba846bc861e7e59b5cc00cb/f9d3af1c8cdb49a6bc39b5ce6e9efd61/?child=last)
+- [Image on Intro Page only](https://copilot.microsoft.com/shares/YTREtPRUMTsYoVwiZyqfr)
+- [Elif Troubleshooting](https://copilot.microsoft.com/shares/HdhCGrCfKB61F1fBcMkoN)
+- [Indentation Problem](https://copilot.microsoft.com/shares/boYbKeh39r7kSqUaUyZYy)
+- [Page Navigation](https://copilot.microsoft.com/shares/ShCkz5X46RC4KdNtiNJnS) 
 
 **Media**
 - The image used were taken from (https://www.sanriogiftgate.com.hk/en/categories/sanrio-mix-characters)
@@ -195,5 +204,3 @@ The dashboard was designed to balanced functionality and visual appeal, ensuring
 
 ## Conclusion
 This project successfully demonstrates data analytics, visualisations and AI-driven insights to analyse Sanrio Characters Ranking. The interactive dashboards enables both technical and non-technical audiences to explore data-driven findings efficiently.  
-
-[def]: https://github.com/tamikamqhum/Sanrio_Ranking/blob/main/Dashboard%20Planning.jpg
