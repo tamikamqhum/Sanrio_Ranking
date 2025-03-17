@@ -38,7 +38,7 @@ This dataset is valuable for analyzing trends, popularity shifts, and historical
 Understanding character popularity is essential for Sanrio's marketing, merchandising and brand strategy. The analysis aims to: 
 1. Identify long-term character popularity trends
 2. Analysing patterns linked to media exposure, merch releases and collaborations
-3. Provide insights into how character rankings flactuate over time 
+3. Provide insights into how character rankings fluctuate over time 
 
 
 ## Hypothesis and Validation 
@@ -102,82 +102,48 @@ Understanding character popularity is essential for Sanrio's marketing, merchand
 * **Fair Representation:** Analysis ensures no undue preferences is given to specific characters 
 
 ## Dashboard Design
-**Overview**
-- The dashboard was designed to deliver insights effectively for both technical and non-technical audiences. It integrates interactive elements, visual storytelling, and key performance indicators (KPIs) to maximize engagement.
+**Dashboard Plan**
+The dashboard was designed to balanced functionality and visual appeal, ensuring users can easily explore insights. 
+- Visual Hierarchy to highlight key insights and KPI's 
+- Clear navigation with intuitive flow for non-technical users 
+- Colour-coded visualisations to distinguish top and lower-ranked characters effectively
+- **Intro Page:** An introductory page that welcomes users, briefly explains the dashboards purpose and showcases and engaging Sanrio-themed image for visual appeal
 
 ---
 **Page 1: Overview of Ranking**
-- **Title:** *Sanrio Character Ranking Overview*
-- **Widgets:**
-    - **Dropdown Filter:** Select a year 
-    - **Dropdown Filter:** Filter by character 
-    - **Dynamic Bar Chart:** Ranks for the selected year 
-    - **Summary Table:** Displays:
-        - Character Name 
-        - Rank 
-        - Highest/lowest rank achieved 
-        - Number of times ranked 
-    - **KPI Banner:** Key Metrics at the top, including: 
+ - **Dropdown Filter:** Select a year 
+- **Dropdown Filter:** Filter by character 
+- **Dynamic Bar Chart:** Ranks for the selected year 
+- **Summary Table:** Displays Character Name, Rank, Highest/lowest rank achieved, Number of times ranked 
+- **KPI Banner:** Key Metrics at the top, including: 
         - Total unique characters 
         - Most Frequent No.1 Character 
         - Average rank improvement over time 
-    - **Navigation buttons:** Links to character performance, debut analysis and insight pages. 
-
-**Design Considerations**
-- The KPI banner provides immediate insight for non techical analysis 
-- Clear Visual separation between key metrics and detailed data ensures readability. 
-
+ 
 ---
 **Page 2: Character Performance**
-- **Title:** *Character Trends Over Time*
-- **Widget:**
-    - **Line Chart:** Tracks Year vs Rank for Individual characters
-    - **Dropdown Menu:** Select characters to view their trends 
-    - **Heatmap:** Year vs Rank with colour intensity indicating position 
-    - **Annotation Feature:** Highlights key insights like major jumps or drops
-    - **Character Image Display:** Adds visual context for selected characters 
-    - **Navigation buttons:** "Back to Overview" and "Next Page"
-
-**Design Considerations**
-- Annotations guide non-technical users by pointing out key insights 
-- Including character images improves engagement and storytelling
+- **Line Chart:** Tracks Year vs Rank for Individual characters
+- **Dropdown Menu:** Select characters to view their trends 
+- **Heatmap:** Year vs Rank with colour intensity indicating position 
 
 ---
 **Page 3: Debut and Longevity Analysis**
-- **Title:** *Debut and Popularity Longevity*
-- **Widgets:**
-    - **Histogram:** Distribution of charcaters by debut year 
-    - **Bar Chart:** Total years ranked vs unique characters 
-    - **Tooltip-enabled scatter plot:** Debut years vs total time ranked, color coded by highest ranked acheived 
-    - **Color coded clusters:** Distinguish long time top performers from rising stars 
-    Timeline feature: Tracks key character milestone 
-
-**Design Considerations**
-- Colour Coded clusters simplify complex insight for non technical viewers 
-- The timeline features adds storytelling to connect data patterns with real word events 
+ - **Histogram:** Distribution of charcaters by debut year 
+- **Bar Chart:** Total years ranked vs unique characters 
+ - **Scatter plot:** Debut years vs total time ranked, color coded by highest ranked acheived  
 
 ---
 **Page 4: Custom Insights**
-- **Title:** *Deep Dive: Insights and Comparisons*
-- **Widgets:**
-    - **Checkout filters:** Select years or characters to compare
-    - **Side-by-side plots:** Compare popularity trends across characters or time periods. 
-    - **KPI indicators**  Display key takeaways like:
+
+- **Checkout filters:** Select years or characters to compare
+- **Side-by-side plots:** Compare popularity trends across characters or time periods. 
+- **KPI indicators**  Display key takeaways like:
         - Characters with consistent top ranking 
         - Significant drops or improvement 
-    - **"Story Mode" Feature:** A guided walkthrough to narrate key insights for less experienced users 
-    - **Export Feature:** Allow users to download filtered insights as csv or pdf 
+- **"Story Mode" Feature:** A guided walkthrough for insights presentation
+- **Export Feature:** Allow users to download filtered insights as csv or pdf 
 
-**Design Considerations**
-- The "Story Mode" ensures that non-technical audience grasp important insights effectively 
-- Export options prrovide flexibility for technical users conducting further analysis
-
----
-**Community Insights Effectively**
-- **Visual Hierarchy:** KPIs and key insights are priotised for immediate impact 
-- **Color Theory:** Warm color (red, orange) highlight top ranking, while cool tones(blue, purple) represent lower ranks 
-- **Interactive Elements:** Filters, tooltips and annotations guide both technical and non technical audiences 
-- **Data Dictionary Tab:** Provides clear definitionss for metrics such as percentile, rank shifts and debuts year. 
+# [Dashboard Plan](https://github.com/tamikamqhum/Sanrio_Ranking/blob/main/Dashboard%20Planning.jpg)
 
 
 ## Challenges & Solutions 
@@ -223,3 +189,5 @@ Understanding character popularity is essential for Sanrio's marketing, merchand
 
 ## Conclusion
 This project successfully demonstrates data analytics, visualisations and AI-driven insights to analyse Sanrio Characters Ranking. The interactive dashboards enables both technical and non-technical audiences to explore data-driven findings efficiently.  
+
+[def]: https://github.com/tamikamqhum/Sanrio_Ranking/blob/main/Dashboard%20Planning.jpg
