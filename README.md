@@ -220,6 +220,7 @@ streamlit run Sanrio_dashboard.py
 - [Elif Troubleshooting](https://copilot.microsoft.com/shares/HdhCGrCfKB61F1fBcMkoN)
 - [Indentation Problem](https://copilot.microsoft.com/shares/boYbKeh39r7kSqUaUyZYy)
 - [Page Navigation](https://copilot.microsoft.com/shares/ShCkz5X46RC4KdNtiNJnS) 
+- [Markdown Code in Readme](https://chatgpt.com/share/67d84928-04d4-8010-a12c-af9cdd5d2110)
 
 **Media**
 - The image used were taken from (https://www.sanriogiftgate.com.hk/en/categories/sanrio-mix-characters)
