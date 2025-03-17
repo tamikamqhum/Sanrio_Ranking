@@ -228,3 +228,11 @@ streamlit run Sanrio_dashboard.py
 
 ## Conclusion
 This project successfully demonstrates data analytics, visualisations and AI-driven insights to analyse Sanrio Characters Ranking. The interactive dashboards enables both technical and non-technical audiences to explore data-driven findings efficiently.  
+ 
+ ---
+
+ ## Acknowledgments
+ I would like to express my gratitude to the following individuals and resources for their support and guidance throughout this project: 
+ - **LMS:** referencing back to past work and guiding me
+ - **Vasi and Neil:** My tutors for their insighful advice 
+ - **ChatGPT and Co-Pilot:** for their invaluable assistance in resolving code errors and improving functionality 
