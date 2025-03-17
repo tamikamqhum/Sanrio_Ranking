@@ -52,7 +52,7 @@ if page == "Introduction":
     💡 *Fun Fact:* Hello Kitty has consistently remained a fan-favorite since her debut in 1974!
     """)
 
-    # Only display the image on the Introduction page
+    # Only display the image on the Introduction page # Help from Co-Pilot
     st.image(
         "https://admin.sportshackster.com//BlogFiles/Untitled_design_63858880819066.jpg", 
         caption="Sanrio Characters", 
@@ -244,4 +244,4 @@ elif page == "Custom Insights":
 
 # Footer
 st.sidebar.markdown("---")
-st.sidebar.write("Sanrio Character Dashboard - Designed with ❤️ using Streamlit")
+st.sidebar.write("Sanrio Character Dashboard - Designed with ❤️ using Streamlit") # Help from Co-pilot and streamlit cheatsheet with emoji's
