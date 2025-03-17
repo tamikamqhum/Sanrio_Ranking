@@ -150,6 +150,12 @@ The dashboard was designed to balanced functionality and visual appeal, ensuring
 * **Handling Missing Data:** Used interpolation techniques 
 * **Ensuring Accuracy in Trend Analysis:** Cross-checked with multiple sources 
 * **Optimizing Dashboard Performance:** Reduced data load times with caching 
+* **AI Challenges:** *which were all fixed with the use of Co-Pilot*
+    - Filtered Data Issue
+    - Elif Problem 
+    - Identation Problem with insight_chart
+    - Navigation Bar Issue- page switching in Streamlit
+
 
 ## Future Improvements 
 1. Integrate sentiment analysis using social media data 
@@ -185,7 +191,7 @@ The dashboard was designed to balanced functionality and visual appeal, ensuring
 
 **Media**
 - The image used were taken from (https://www.sanriogiftgate.com.hk/en/categories/sanrio-mix-characters)
-- Dashboard planning 
+- Dashboard planning (https://github.com/tamikamqhum/Sanrio_Ranking/blob/main/Dashboard%20Planning.jpg)
 
 ## Conclusion
 This project successfully demonstrates data analytics, visualisations and AI-driven insights to analyse Sanrio Characters Ranking. The interactive dashboards enables both technical and non-technical audiences to explore data-driven findings efficiently.  
