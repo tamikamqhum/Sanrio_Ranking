@@ -19,6 +19,7 @@ st.sidebar.title("🌟 Navigation")
 page = st.sidebar.radio(
     "Go to",
     [
+        "Introduction",
         "Overview of Rankings",
         "Character Performance",
         "Debut and Longevity Analysis",
@@ -28,6 +29,29 @@ page = st.sidebar.radio(
 
 # Neon color scheme for black background
 neon_colors = ["#FF1493", "#00FFFF", "#32CD32", "#FFFF00"]  # Pink, Cyan, Neon Green, Neon Yellow
+
+# Introduction Page 
+if page == "Introduction":
+    st.title("🌟 Welcome to the Sanrio Character Dashboard!")
+    st.write("""
+    This interactive dashboard showcases Sanrio character ranking trends, insights, and performance over the years.
+    
+    ### How to Use
+    - **Overview of Rankings:** Explore character rankings by year.
+    - **Character Performance:** See detailed trends for individual characters.
+    - **Debut & Longevity Analysis:** Discover how debut years influence rankings.
+    - **Custom Insights:** Create custom comparisons across selected characters and years.
+
+    ### About the Data
+    The dataset includes:
+    - **Rank:** The character's rank for a given year.
+    - **Highest Rank:** Best rank achieved.
+    - **Lowest Rank:** Worst rank achieved.
+    - **Total Times Ranked:** How often the character has appeared in rankings.
+
+    💡 *Fun Fact:* Hello Kitty has consistently remained a fan-favorite since her debut in 1974!
+    """)
+
 
 # Overview of Rankings
 if page == "Overview of Rankings":
